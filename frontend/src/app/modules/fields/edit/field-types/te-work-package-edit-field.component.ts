@@ -26,15 +26,19 @@
 // See doc/COPYRIGHT.rdoc for more details.
 // ++
 
-import {
-  SimpleResource
-} from 'core-app/modules/common/path-helper/apiv3/path-resources';
+import {Component} from "@angular/core";
+import {WorkPackageEditFieldComponent} from "core-app/modules/fields/edit/field-types/work-package-edit-field.component";
 
-export class Apiv3TimeEntryPaths extends SimpleResource {
-  constructor(basePath:string, newsId:string|number) {
-    super(basePath, newsId);
+@Component({
+  templateUrl: './work-package-edit-field.component.html'
+})
+export class TimeEntryWorkPackageEditFieldComponent extends WorkPackageEditFieldComponent {
+  // Although the schema states the work packages to not be required,
+  // as time entries can also be assigned to a project, we want to only assign
+  // time entries to work packages and thus require a value.
+  // The back end will have to be changed in due time but not as long as there is still a rails based
+  // time entry view in the application.
+  protected isRequired() {
+    return true;
   }
-
-  // Static paths
-  readonly form = new SimpleResource(this.path, 'form');
 }

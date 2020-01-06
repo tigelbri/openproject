@@ -26,49 +26,44 @@
 // See doc/COPYRIGHT.rdoc for more details.
 // ++
 
-import {DisplayField} from "core-app/modules/fields/display/display-field.module";
+import {StateService} from '@uirouter/core';
+import {KeepTabService} from 'core-components/wp-single-view-tabs/keep-tab/keep-tab.service';
+import {UiStateLinkBuilder} from "core-components/wp-fast-table/builders/ui-state-link-builder";
+import {WorkPackageDisplayField} from "core-app/modules/fields/display/field-types/work-package-display-field.module";
 
-export class WorkPackageDisplayField extends DisplayField {
+export class LinkedWorkPackageDisplayField extends WorkPackageDisplayField {
 
   public text = {
+    linkTitle: this.I18n.t('js.work_packages.message_successful_show_in_fullscreen'),
     none: this.I18n.t('js.filter.noneElement')
   };
 
-  public get value() {
-    return this.resource[this.name];
+  private $state:StateService = this.$injector.get(StateService);
+  private keepTab:KeepTabService = this.$injector.get(KeepTabService);
+
+  private uiStateBuilder:UiStateLinkBuilder = new UiStateLinkBuilder(this.$state, this.keepTab);
+
+  public render(element:HTMLElement, displayText:string):void {
+    if (this.isEmpty()) {
+      element.innerText = this.placeholder;
+      return;
+    }
+
+    let link = this.uiStateBuilder.linkToShow(
+      this.wpId,
+      this.text.linkTitle,
+      this.valueString
+    );
+
+    element.innerHTML = '';
+    element.appendChild(link);
   }
 
-  public get title() {
-    if (this.isEmpty()) {
-      return this.text.none;
-    } else {
-      return this.value.name;
-    }
-  }
-
-  public get wpId() {
-    if (this.isEmpty()) {
-      return null;
-    }
-
-    if (this.value.$loaded) {
-      return this.value.id;
-    }
-
-    // Read WP ID from href
-    return this.value.href.match(/(\d+)$/)[0];
+  public get writable():boolean {
+    return false;
   }
 
   public get valueString() {
-    // cannot display the type name easily here as it may not be loaded
-    return `#${ this.wpId } ${ this.title }`;
-  }
-
-  public isEmpty():boolean {
-    return !this.value;
-  }
-
-  public get unknownAttribute():boolean {
-    return false;
+    return '#' + this.wpId;
   }
 }

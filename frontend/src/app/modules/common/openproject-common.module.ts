@@ -96,6 +96,7 @@ import {NgSelectModule} from "@ng-select/ng-select";
 import {NgOptionHighlightModule} from "@ng-select/ng-option-highlight";
 import {CurrentProjectService} from "core-components/projects/current-project.service";
 import {CurrentUserService} from "core-components/user/current-user.service";
+import {WorkPackageAutocompleterComponent} from "core-app/modules/common/autocomplete/wp-autocompleter.component";
 
 export function bootstrapModule(injector:Injector) {
   return () => {
@@ -141,7 +142,9 @@ export function bootstrapModule(injector:Injector) {
     NgSelectModule,
     NgOptionHighlightModule,
 
-    DynamicModule.withComponents([VersionAutocompleterComponent,
+    DynamicModule.withComponents([
+      VersionAutocompleterComponent,
+      WorkPackageAutocompleterComponent,
       CreateAutocompleterComponent]),
   ],
   exports: [
@@ -204,6 +207,8 @@ export function bootstrapModule(injector:Injector) {
     EnterpriseBannerComponent,
 
     DynamicModule,
+
+    WorkPackageAutocompleterComponent,
   ],
   declarations: [
     OpDatePickerComponent,
@@ -272,6 +277,7 @@ export function bootstrapModule(injector:Injector) {
     // Autocompleter
     CreateAutocompleterComponent,
     VersionAutocompleterComponent,
+    WorkPackageAutocompleterComponent,
 
     HomescreenNewFeaturesBlockComponent,
     BoardVideoTeaserModalComponent

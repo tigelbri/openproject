@@ -26,15 +26,15 @@
 // See doc/COPYRIGHT.rdoc for more details.
 // ++
 
-import {
-  SimpleResource
-} from 'core-app/modules/common/path-helper/apiv3/path-resources';
+import {DisplayField} from "core-app/modules/fields/display/display-field.module";
 
-export class Apiv3TimeEntryPaths extends SimpleResource {
-  constructor(basePath:string, newsId:string|number) {
-    super(basePath, newsId);
+export class PlainFormattableDisplayField extends DisplayField {
+  public get value() {
+    if (!this.schema) {
+      return null;
+    }
+    const element = this.resource[this.name];
+
+    return element && element.raw || '';
   }
-
-  // Static paths
-  readonly form = new SimpleResource(this.path, 'form');
 }
