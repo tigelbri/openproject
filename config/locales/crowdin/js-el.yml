@@ -1,6 +1,6 @@
 #-- copyright
-#OpenProject is a project management system.
-#Copyright (C) 2012-2018 the OpenProject Foundation (OPF)
+#OpenProject is an open source project management software.
+#Copyright (C) 2012-2020 the OpenProject GmbH
 #This program is free software; you can redistribute it and/or
 #modify it under the terms of the GNU General Public License version 3.
 #OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
@@ -79,7 +79,7 @@ el:
       highlighting:
         inline: 'Επισήμανση inline:'
         entire_card_by: 'Ολόκληρη κάρτα με'
-      remove_from_list: 'Αφαίρεση από τη λίστα'
+      remove_from_list: 'Αφαίρεση κάρτας από τη λίστα'
     clipboard:
       browser_error: "Ο περιηγητής σας δεν υποστηρίζει αντιγραφή από το clipboard. Παρακαλούμε αντιγράψτε το επιλεγμένο κείμενο χειροκίνητα."
       copied_successful: "Επιτυχής αντιγραφή στο πρόχειρο!"
@@ -97,7 +97,7 @@ el:
         polar_area: 'Polar area'
       tabs:
         graph_settings: 'Γενικά'
-        dataset: 'Dataset %{number}'
+        dataset: 'Σύνολο Δεδομένων %{number}'
       errors:
         could_not_load: 'Τα δεδομένα για εμφάνιση στο διάγραμμα δεν μπόρεσαν να φορτωθούν. Μπορεί να λείπουν τα απαραίτητα δικαιώματα.'
     description_available_columns: "Διαθέσιμες στήλες"
@@ -158,7 +158,7 @@ el:
         drag_to_activate: "Σύρετε πεδία από εδώ για να τα ενεργοποιήσετε"
         add_group: "Προσθήκη ομάδας χαρακτηριστικών"
         add_table: "Προσθήκη πίνακα με σχετιζόμενες εργασίες"
-        edit_query: 'Edit query'
+        edit_query: 'Επεξεργασία αναζήτησης'
         new_group: 'Νέα ομάδα'
         reset_to_defaults: 'Επαναφορά στα προεπιλεγμένα'
     custom_actions:
@@ -202,8 +202,8 @@ el:
       blocks:
         new_features:
           text_new_features: "Διαβάστε για τις νέες λειτουργίες και τις ενημερώσεις προϊόντων."
-          current_new_feature_html: "OpenProject contains a new <b>Overview page</b> to <b>display important project information</b> and show whether the project is on track. </br> You can insert various new status widgets, such as: <ul><li>project status,</li> <li>overview of work package status,</li> <li>task progress,</li> <li>tasks assigned to users.</li></ul>"
-          learn_about: "Learn more about the new status widgets"
+          current_new_feature_html: "Το OpenProject περιέχει μια νέα σελίδα <b> Επισκόπηση </b> για να <b>εμφανίσετε σημαντικές πληροφορίες έργου </b> και να δείξει εάν το έργο βρίσκεται εντός χρονοδιαγράμματος. </br> Μπορείτε να εισάγετε διάφορα widgets για την κατάσταση, όπως: <ul><li> κατάσταση έργου, </li><li> επισκόπηση της κατάστασης του πακέτου εργασίας, </li><li>πρόοδος εργασίας,</li> <li> εργασίες που έχουν εκχωρηθεί στους χρήστες. </li></ul>"
+          learn_about: "Μάθετε περισσότερα σχετικά με τα νέα widgets"
     label_activate: "Ενεργοποίηση"
     label_add_column_after: "Προσθήκη στήλης μετά"
     label_add_column_before: "Προσθήκη στήλης πριν"
@@ -377,10 +377,10 @@ el:
           task_board_select: '... και επιλέξτε την καταχώρηση <b>Πίνακας Καθηκόντων</b>.'
           task_board: "Ο <b>Πίνακας Καθηκόντων</b> οπτικοποιεί την διαδικασία για αυτό το sprint. Προσθέστε καινούργια καθήκοντα ή εμπόδια με το εικονίδιο + δίπλα σε μια ιστορία χρήστη. Μέσω drag'n'drop μπορείτε να ενημερώσετε την κατάσταση."
         boards:
-          overview: 'Manage your work within an intuitive <b>Boards</b> view.'
+          overview: 'Διαχειριστείτε την εργασία σας μέσα από την διαισθητική προβολή <b>Πινάκων</b>.'
           lists: 'Μπορείτε να δημιουργήσετε πολλαπλές λίστες (στήλες) μέσα σε μια προβολή Πίνακα, π.χ. να δημιουργήσετε έναν πίνακα KANBAN.'
           add: 'Κάντε κλικ στο + για να <b>προσθέσετε μια νέα κάρτα</b> στη λίστα μέσα σε ένα Πίνακα.'
-          drag: 'Drag & Drop your cards within a list to re-order, or to another list. A double click will open the details view.'
+          drag: 'Σύρετε τις κάρτες μέσα στη λίστα για να αλλάξετε την σειρά ή σε άλλη λίστα. Με διπλό κλικ μπορείτε να ανοίξετε την προβολή λεπτομερειών.'
         wp:
           toggler: "Τώρα ας ρίξουμε μια ματιά στη ενότητα <b>Πακέτα εργασίας</b>, η οποία δίνει μια πιο λεπτομερή ματιά της εργασίας σας."
           list: 'Αυτή είναι η λίστα <b>Πακέτων εργασίας</b> με τις σημαντικές εργασίας για το έργο σας, όπως καθήκοντα, λειτουργίες, ορόσημα, σφάλματα και άλλα. <br> Μπορείτε να δημιουργήσετε ή να επεξεργαστείτε ένα πακέτο εργασίας απευθείας από αυτή τη λίστα. Για να δείτε τις λεπτομέρειες του, μπορείτε να κάνετε διπλό κλικ σε μια από τις γραμμές.'
@@ -419,7 +419,7 @@ el:
         confirm_reset: >
           Προειδοποίηση: Είστε σίγουροι ότι θέλετε να επαναφέρετε τη φόρμα διαμόρφωσης; Αυτό θα επαναφέρει τα χαρακτηριστικά στις προεπιλεγμένες ομάδες τους και θα απενεργοποιήσει ΌΛΑ τα προσαρμοσμένα πεδία.
         upgrade_to_ee: "Αναβαθμίστε σε Έκδοση για Επιχειρήσεις"
-        upgrade_to_ee_text: "Wow! Αν χρειάζεστε αυτή τη λειτουργία τότε είστε σούπερ επαγγελματίας! Θα θέλατε να υποστηρίξετε εμάς τους προγραμματιστές OpenSource με το να γίνετε πελάτης της έκδοσης για επιχειρήσεις;"
+        upgrade_to_ee_text: "Wow! Αν χρειάζεστε αυτή τη λειτουργία τότε είστε σούπερ επαγγελματίας! Θα θέλατε να στηρίξετε εμάς τους προγραμματιστές OpenSource με το να γίνετε πελάτης της έκδοσης για επιχειρήσεις;"
         more_information: "Περισσότερες πληροφορίες"
         nevermind: "Δεν πειράζει"
         filter_types:
@@ -469,7 +469,7 @@ el:
       set_parent: "Ορισμός γονέα"
       change_parent: "Αλλαγή γονέα"
       remove_parent: "Αφαίρεση γονέα"
-      hierarchy_indent: "Indent hierarchy"
+      hierarchy_indent: "Ιεραρχία εσοχής"
       hierarchy_outdent: "Outdent hierarchy"
       group_by_wp_type: "Ομαδοποίηση κατά τύπο πακέτου εργασίας"
       group_by_relation_type: "Ομαδοποίηση κατά τύπο συσχέτισης"
@@ -709,7 +709,7 @@ el:
         confirm_edit_cancel: "Είστε βέβαιοι ότι θέλετε να ακυρώσετε την επεξεργασία του ονόματος αυτής της προβολής; Ο τίτλος θα επανέλθει στην προηγούμενη τιμή του."
         click_to_edit_query_name: "Κάντε κλικ για να επεξεργαστείτε τον τίτλο αυτής της προβολής."
         rename_query_placeholder: "Το όνομα αυτής της προβολής"
-        star_text: "Mark this view as favorite and add to the saved views sidebar on the left."
+        star_text: "Σήμανση αυτής της προβολής ως αγαπημένη και προσθήκη στην πλάγια μπάρα αποθηκευμένων προβολών στα αριστερά."
         public_text: >
           Publish this view, allowing other users to access your view. Users with the 'Manage public views' permission can modify or remove public query. This does not affect the visibility of work package results in that view and depending on their permissions, users may see different results.
         errors:
